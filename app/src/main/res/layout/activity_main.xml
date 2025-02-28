@@ -71,7 +71,7 @@
 
         <LinearLayout
             android:layout_width="393dp"
-            android:layout_height="281dp"
+            android:layout_height="349dp"
             android:layout_marginBottom="248dp"
             android:background="@color/white"
             android:orientation="vertical"
@@ -105,19 +105,25 @@
                 android:textStyle="bold">
 
             </TextView>
-
-            <EditText
-                android:id="@+id/edittext_email"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:layout_marginHorizontal="30dp"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/NTU_Colour_Grey"
-
                 >
+                <EditText
+                    android:id="@+id/edittext_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginHorizontal="30dp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/NTU_Colour_Grey"
+                    >
+                </EditText>
 
-            </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -131,53 +137,56 @@
 
             </TextView>
 
-            <EditText
-                android:drawableEnd="@drawable/reveal_password_icon"
-                android:id="@+id/edittext_password"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:layout_marginHorizontal="30dp"
-                android:inputType="textPassword"
-                android:textColor="@color/NTU_Colour_Grey"
-
+                app:passwordToggleEnabled="true"
                 >
 
-            </EditText>
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edittext_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginHorizontal="30dp"
+                    android:inputType="textPassword"
+                    android:textColor="@color/NTU_Colour_Grey"
+                    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:text="Need an account?"
-        android:textColor="@color/NTU_Colour_Grey"
-        android:textSize="14dp"
-        android:textStyle="bold">
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    </TextView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:text="Click Here"
-        android:textColor="@color/NTU_Colour_Blue"
-        android:textSize="14dp"
-        android:textStyle="bold"
-        >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Need an account?"
+                    android:textColor="@color/NTU_Colour_Grey"
+                    android:textSize="14dp"
+                    android:textStyle="bold">
 
-</LinearLayout>
+                </TextView>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Click Here"
+                    android:textColor="@color/NTU_Colour_Blue"
+                    android:textSize="14dp"
+                    android:textStyle="bold">
 
+                </TextView>
 
+            </LinearLayout>
 
 
         </LinearLayout>

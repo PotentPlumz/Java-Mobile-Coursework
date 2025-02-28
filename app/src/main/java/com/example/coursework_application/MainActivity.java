@@ -1,6 +1,7 @@
 package com.example.coursework_application;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +9,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.bumptech.glide.Glide;
+
+
 public class MainActivity extends AppCompatActivity {
+
+    ImageView ImageView_NTU_gif;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +26,13 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
 
-            //test comment
+
         });
+
+        ImageView_NTU_gif = findViewById(R.id.NTU_gif);
+        Glide.with(this).load(R.drawable.video_turned_to_gif).into(ImageView_NTU_gif);
+
+
+
     }
 }

@@ -5,23 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/NTU_Colour_Light_Grey"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/NTU_gif"
-        android:layout_width="419dp"
-        android:layout_height="300dp"
+        android:layout_width="437dp"
+        android:layout_height="253dp"
         android:layout_marginTop="4dp"
         android:src="@drawable/ntu_logo"
+        android:alpha="0.75"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -31,12 +24,66 @@
         android:id="@+id/NTU_logo"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/ntu_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/Welcome_textview"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="440dp"
+        android:lines="2"
+        android:text="NTU Clifton Campus Explorer"
+        android:textAlignment="center"
+        android:textColor="@color/NTU_Colour_Pink"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/line"
+        android:layout_width="453dp"
+        android:layout_height="10dp"
+        android:layout_marginVertical="88dp"
+        android:alpha="0.8"
+        android:backgroundTint="@color/black"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@+id/NTU_logo"
+        tools:layout_editor_absoluteX="-21dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:paddingVertical="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Hello World">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    #
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

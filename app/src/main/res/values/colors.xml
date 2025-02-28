@@ -2,4 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="NTU_Colour_Pink">#E8005A</color>
+    <color name="NTU_Colour_Blue">#004877</color>
+    <color name="NTU_Colour_Grey">#515151</color>
+    <color name="NTU_Colour_Light_Grey">#CCCCCC</color>
+
+
+
+
+
+
+
 </resources>

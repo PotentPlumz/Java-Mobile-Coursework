@@ -5,6 +5,169 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register_Activity">
+    android:background="@color/NTU_Colour_Light_Grey"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/NTU_gif"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="0dp"
+        android:alpha="0.75"
+        android:src="@drawable/video_turned_to_gif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/NTU_logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ntu_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="575dp"
+        android:layout_marginBottom="-30dp"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="393dp"
+            android:layout_height="349dp"
+            android:layout_marginBottom="248dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingVertical="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginHorizontal="30dp"
+                android:text="Register"
+                android:textColor="@color/NTU_Colour_Pink"
+                android:textSize="25dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Email Address"
+                android:textColor="@color/NTU_Colour_Grey"
+                android:textSize="14dp"
+                android:textStyle="bold">
+
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <EditText
+                    android:id="@+id/edittext_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:textSize="10dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/NTU_Colour_Grey"
+                    >
+                </EditText>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Password"
+                android:textColor="@color/NTU_Colour_Grey"
+                android:textSize="14dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                >
+
+                <EditText
+                    android:id="@+id/edittext_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:textSize="10dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:inputType="textPassword"
+                    android:textColor="@color/NTU_Colour_Grey"
+                    >
+
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Already have an account?"
+                    android:textColor="@color/NTU_Colour_Grey"
+                    android:textSize="14dp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/move_to_login_textview"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Click Here"
+                    android:textColor="@color/NTU_Colour_Blue"
+                    android:textSize="14dp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

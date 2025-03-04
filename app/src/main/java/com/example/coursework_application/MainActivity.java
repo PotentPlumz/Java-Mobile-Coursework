@@ -48,12 +48,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
     }
-
     private void Move_to_Register_Activity(){
         Intent intent = new Intent(this, Register_Activity.class);
         startActivity(intent);

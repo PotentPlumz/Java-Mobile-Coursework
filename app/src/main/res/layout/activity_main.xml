@@ -12,10 +12,11 @@
         android:id="@+id/NTU_gif"
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:layout_marginTop="4dp"
-        android:src="@drawable/ntu_logo"
+        android:layout_marginTop="0dp"
         android:alpha="0.75"
+        android:src="@drawable/video_turned_to_gif"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
@@ -35,7 +36,7 @@
         android:id="@+id/Welcome_textview"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="440dp"
+        android:layout_marginBottom="550dp"
         android:lines="2"
         android:text="NTU Clifton Campus Explorer"
         android:textAlignment="center"
@@ -46,18 +47,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/line"
-        android:layout_width="453dp"
-        android:layout_height="10dp"
-        android:layout_marginVertical="88dp"
-        android:layout_marginTop="120dp"
-        android:alpha="0.8"
-        android:backgroundTint="@color/black"
-        android:text=""
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NTU_logo" />
 
 
     <androidx.cardview.widget.CardView

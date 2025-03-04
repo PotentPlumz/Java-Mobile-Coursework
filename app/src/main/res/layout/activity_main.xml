@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/NTU_gif"
-        android:layout_width="437dp"
-        android:layout_height="253dp"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
         android:layout_marginTop="4dp"
         android:src="@drawable/ntu_logo"
         android:alpha="0.75"
@@ -78,7 +78,6 @@
             android:paddingVertical="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
@@ -175,6 +174,7 @@
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:id="@+id/move_to_register_textview"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:layout_marginLeft="10dp"

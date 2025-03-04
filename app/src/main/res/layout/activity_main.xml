@@ -98,7 +98,7 @@
                 android:layout_height="wrap_content"
                 >
                 <EditText
-                    android:id="@+id/edittext_email"
+                    android:id="@+id/edittext_email_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
@@ -132,7 +132,7 @@
                 >
 
                 <EditText
-                    android:id="@+id/edittext_password"
+                    android:id="@+id/edittext_password_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"

@@ -44,7 +44,7 @@
 
         <LinearLayout
             android:layout_width="393dp"
-            android:layout_height="349dp"
+            android:layout_height="540dp"
             android:layout_marginBottom="248dp"
             android:background="@color/white"
             android:orientation="vertical"
@@ -62,7 +62,6 @@
                 android:textColor="@color/NTU_Colour_Pink"
                 android:textSize="25dp"
                 android:textStyle="bold">
-
             </TextView>
 
             <TextView
@@ -71,24 +70,23 @@
                 android:layout_gravity="top"
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginTop="20dp"
-                android:text="Email Address"
+                android:text="First Name"
                 android:textColor="@color/NTU_Colour_Grey"
                 android:textSize="14dp"
                 android:textStyle="bold">
-
             </TextView>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
                 <EditText
-                    android:id="@+id/edittext_email"
+                    android:id="@+id/edittext_firstname_register"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:textSize="10dp"
                     android:layout_marginHorizontal="30dp"
-                    android:inputType="textEmailAddress"
                     android:textColor="@color/NTU_Colour_Grey"
                     >
                 </EditText>
@@ -97,12 +95,73 @@
             </com.google.android.material.textfield.TextInputLayout>
 
 
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Last Name"
+                android:textColor="@color/NTU_Colour_Grey"
+                android:textSize="14dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText
+                    android:id="@+id/edittext_lastname_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:textSize="10dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:textColor="@color/NTU_Colour_Grey"
+                    >
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="5dp"
+                android:text="Email"
+                android:textColor="@color/NTU_Colour_Grey"
+                android:textSize="14dp"
+                android:textStyle="bold">
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <EditText
+                    android:id="@+id/edittext_email_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:textSize="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginHorizontal="30dp"
+                    android:textColor="@color/NTU_Colour_Grey"
+                    >
+                </EditText>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="5dp"
                 android:text="Password"
                 android:textColor="@color/NTU_Colour_Grey"
                 android:textSize="14dp"
@@ -117,7 +176,39 @@
                 >
 
                 <EditText
-                    android:id="@+id/edittext_password"
+                    android:id="@+id/edittext_password1_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginHorizontal="30dp"
+                    android:textSize="10dp"
+                    android:inputType="textPassword"
+                    android:textColor="@color/NTU_Colour_Grey"
+                    >
+
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="5dp"
+                android:text="Confirm Password"
+                android:textColor="@color/NTU_Colour_Grey"
+                android:textSize="14dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                >
+
+                <EditText
+                    android:id="@+id/edittext_password2_register"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
@@ -139,7 +230,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:text="Already have an account?"
                     android:textColor="@color/NTU_Colour_Grey"
                     android:textSize="14dp"
@@ -153,7 +244,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:text="Click Here"
                     android:textColor="@color/NTU_Colour_Blue"
                     android:textSize="14dp"

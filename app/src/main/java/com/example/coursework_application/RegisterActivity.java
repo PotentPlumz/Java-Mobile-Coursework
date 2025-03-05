@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
 
-public class Register_Activity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     ImageView ImageView_NTU_gif;
     TextView Move_to_login_Textview;
@@ -38,15 +38,15 @@ public class Register_Activity extends AppCompatActivity {
         Move_to_login_Textview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Move_to_login_Activity();
+                Move_to_Activity(MainActivity.class);
             }
         });
 
 
     }
 
-    private void Move_to_login_Activity(){
-        Intent intent = new Intent(this, MainActivity.class);
+    private void Move_to_Activity(Class class_name){
+        Intent intent = new Intent(this, class_name);
         startActivity(intent);
     }
 }

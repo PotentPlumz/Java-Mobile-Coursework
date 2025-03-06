@@ -12,7 +12,7 @@
         android:id="@+id/NTU_gif"
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="-60dp"
         android:alpha="0.75"
         android:src="@drawable/video_turned_to_gif"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,19 +32,23 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="575dp"
+        android:layout_height="610dp"
         android:layout_marginBottom="-30dp"
         app:cardCornerRadius="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true">
+
         <LinearLayout
             android:layout_width="393dp"
-            android:layout_height="540dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="248dp"
             android:background="@color/white"
             android:orientation="vertical"
@@ -85,7 +89,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
-                    android:textSize="10dp"
+                    android:textSize="12dp"
                     android:layout_marginHorizontal="30dp"
                     android:textColor="@color/NTU_Colour_Grey"
                     >
@@ -119,7 +123,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
-                    android:textSize="10dp"
+                    android:textSize="12dp"
                     android:layout_marginHorizontal="30dp"
                     android:textColor="@color/NTU_Colour_Grey"
                     >
@@ -147,7 +151,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
-                    android:textSize="10dp"
+                    android:textSize="12dp"
                     android:inputType="textEmailAddress"
                     android:layout_marginHorizontal="30dp"
                     android:textColor="@color/NTU_Colour_Grey"
@@ -181,7 +185,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:layout_marginHorizontal="30dp"
-                    android:textSize="10dp"
+                    android:textSize="12dp"
+                    android:preferKeepClear="true"
                     android:inputType="textPassword"
                     android:textColor="@color/NTU_Colour_Grey"
                     >
@@ -212,7 +217,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
-                    android:textSize="10dp"
+                    android:textSize="12dp"
                     android:layout_marginHorizontal="30dp"
                     android:inputType="textPassword"
                     android:textColor="@color/NTU_Colour_Grey"
@@ -220,6 +225,16 @@
 
                 </EditText>
             </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/Register_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Register"
+                android:layout_marginHorizontal="30dp"
+                android:backgroundTint="@color/NTU_Colour_Pink"
+                ></Button>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -229,8 +244,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
+                    android:layout_marginTop="5dp"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginTop="10dp"
                     android:text="Already have an account?"
                     android:textColor="@color/NTU_Colour_Grey"
                     android:textSize="14dp"
@@ -243,8 +258,8 @@
                     android:id="@+id/move_to_login_textview"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
+                    android:layout_marginTop="5dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
                     android:text="Click Here"
                     android:textColor="@color/NTU_Colour_Blue"
                     android:textSize="14dp"
@@ -252,11 +267,23 @@
 
                 </TextView>
 
+
+
             </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="300dp"
+                android:textColor="@color/white"
+                android:text="bob"
+                >
+            </TextView>
+
 
 
         </LinearLayout>
 
+        </ScrollView>
 
     </androidx.cardview.widget.CardView>
 

@@ -3,6 +3,12 @@
     <style name="Base.Theme.Coursework_Application" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:solidColor">@color/NTU_Colour_Pink</item>
+        <item name="selectableItemBackground">@color/black</item>
+        <item name="iconTint">@color/NTU_Colour_Pink</item>
+        <item name="colorPrimary">@color/NTU_Colour_Pink</item>
     </style>
 
     <style name="Theme.Coursework_Application" parent="Base.Theme.Coursework_Application" />

@@ -52,17 +52,12 @@ public class MainActivity extends AppCompatActivity {
 
 
             //Firebase login authentication
-            loginAuth = FirebaseAuth.getInstance();
-
-
-
+            loginAuth = Utils.getInstance().login_Auth;
 
 
 
 
     }
-
-
 
 
     public void Move_to_Activity(Class class_name){
@@ -71,15 +66,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //Uses the onstart method to check if user is logged in and direct them to the home activity
+    //Uses the on start method to check if user is logged in and direct them to the home activity
     @Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = loginAuth.getCurrentUser();
         if(currentUser != null){
-            Move_to_Activity(HomeActivity.class);
+            //Move_to_Activity(HomeActivity.class);
         }
     }
+
+@Override
+    public void onPause() {
+
+    super.onPause();
+}
+
 
 }

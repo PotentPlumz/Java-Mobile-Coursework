@@ -11,8 +11,8 @@
     <ImageView
         android:id="@+id/NTU_gif"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_marginTop="0dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="-50dp"
         android:alpha="0.75"
         android:src="@drawable/video_turned_to_gif"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +51,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="375dp"
+        android:layout_height="450dp"
         android:layout_marginBottom="-30dp"
         app:cardCornerRadius="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -60,7 +60,7 @@
 
         <LinearLayout
             android:layout_width="393dp"
-            android:layout_height="349dp"
+            android:layout_height="380dp"
             android:layout_marginBottom="248dp"
             android:background="@color/white"
             android:orientation="vertical"
@@ -102,6 +102,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
+                    android:textSize="12dp"
                     android:layout_marginHorizontal="30dp"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/NTU_Colour_Grey"
@@ -136,6 +137,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
+                    android:textSize="12dp"
                     android:layout_marginHorizontal="30dp"
                     android:inputType="textPassword"
                     android:textColor="@color/NTU_Colour_Grey"
@@ -143,6 +145,16 @@
 
                 </EditText>
             </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:backgroundTint="@color/NTU_Colour_Pink"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="10dp"
+                >
+            </Button>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -153,7 +165,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginTop="20dp"
                     android:text="Need an account?"
                     android:textColor="@color/NTU_Colour_Grey"
                     android:textSize="14dp"
@@ -167,7 +178,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
                     android:text="Click Here"
                     android:textColor="@color/NTU_Colour_Blue"
                     android:textSize="14dp"

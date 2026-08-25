@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BuildingsDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/NTU_Colour_Light_Grey"
+        android:background="@color/NTU_Colour_Light_Grey"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/building_detail_go_back"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="32.5dp"
+            android:layout_height="wrap_content"
+            android:text=" &lt;- Go Back"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/NTU_Colour_Pink"
+            >
+
+        </TextView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="15dp"
+            >
+        </Button>
+    </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="650dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="-30dp"
+            app:cardCornerRadius="35dp"
+            >
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="15dp"
+
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name: "
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    >
+                </TextView>
+                <TextView
+                    android:id="@+id/buildings_details_name_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Building Name"
+                    android:textSize="20dp"
+                    >
+                </TextView>
+
+            </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/black"
+                >
+            </Button>
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/building_detail_imageview"
+                android:layout_height="200dp"
+                android:src="@drawable/clifton_pavilion_longer"
+                >
+            </ImageView>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:backgroundTint="@color/black"
+                >
+            </Button>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Services: "
+                    android:textStyle="bold"
+                    android:textSize="20dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/buildings_details_services_textview"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:text="Services"
+                    android:layout_width="match_parent"
+                    android:lines="4"
+                    android:textSize="16dp">
+                </TextView>
+
+            </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/black"
+                >
+            </Button>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description: "
+                    android:textStyle="bold"
+                    android:textSize="20dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/buildings_details_desc_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:lines="7"
+                    android:textSize="16dp">
+                </TextView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+            </ScrollView>
+
+
+
+
+</androidx.cardview.widget.CardView>
+
+
+
+</FrameLayout>

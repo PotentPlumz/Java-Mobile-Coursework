@@ -22,7 +22,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -30,6 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
     TextView Move_to_login_Textview;
     FirebaseAuth loginAuth;
     Button Register_button;
+    FirebaseFirestore FB_database = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,17 +95,20 @@ public class RegisterActivity extends AppCompatActivity {
         String last_name_string = last_name.getText().toString();
 
 
-        if (!password1_string.equals(password2_string)){
-            Toast.makeText(this, "Passwords need to match!", Toast.LENGTH_SHORT).show();
+        if (!Utils.verify_password(password1_string, password2_string)){
+            Toast.makeText(this, "Passwords need to match!", Toast.LENGTH_LONG).show();
             validation = false;
         }
         if (first_name_string.length() < 2 || last_name_string.length() < 2) {
-            Toast.makeText(this, "Name length must be at least 2 characters", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Name length must be at least 2 characters", Toast.LENGTH_LONG).show();
+            validation = false;
+        }
+        if (!email_string.toLowerCase().contains("ntu.ac.uk")){
+            Toast.makeText(this, "Email must be a valid NTU email.", Toast.LENGTH_LONG).show();
             validation = false;
         }
 
         if (validation == true) {
-            Toast.makeText(this, "Successful", Toast.LENGTH_SHORT).show();
             signup(email_string, password1_string);
         }
 
@@ -114,19 +122,60 @@ public class RegisterActivity extends AppCompatActivity {
                                     Log.d("MainActivity", "createUserWithEmail:success");
                                     FirebaseUser user = loginAuth.getCurrentUser();
 
-                                    Toast.makeText(RegisterActivity.this,
-                                            "Authentication success. Use an intent to move to a new activity",
-                                            Toast.LENGTH_SHORT).show();
-//user has been signed in, use an intent to move to the next activity.
+                                    signup_info_to_database();
+
+                                    Intent home_intent = new Intent(RegisterActivity.this, HomeActivity.class);
+                                    startActivity(home_intent);
+                                    finish();
+
                                     } else {
-                                    // If sign in fails, display a message to the user.
-                                            Log.w("MainActivity", "createUserWithEmail:failure", task.getException());
-                                    Toast.makeText(RegisterActivity.this,
-                                            "Authentication failed.",
-                                            Toast.LENGTH_SHORT).show();
+                                    // If sign in fails due to email in use, the error is fed back to the user.
+
+                                    Log.w("MainActivity", "createUserWithEmail:failure", task.getException());
+                                    Exception exception = task.getException();
+
+                                    if (exception instanceof FirebaseAuthUserCollisionException) {
+                                        Toast.makeText(RegisterActivity.this,
+                                                "Email address already in use, try signing in.",
+                                                Toast.LENGTH_SHORT).show();
+                                    }
+                                    else { //Any other errors
+                                        Toast.makeText(RegisterActivity.this,
+                                                "Authentication failed, Please try again",
+                                                Toast.LENGTH_SHORT).show();
+                                    }
+
                                 }
                             }
                         });
+    }
+
+    public void signup_info_to_database(){
+
+        EditText edittext_firstname = findViewById(R.id.edittext_firstname_register);
+        EditText editText_lastname = findViewById(R.id.edittext_lastname_register);
+        EditText editText_email = findViewById(R.id.edittext_email_register);
+
+        String string_firstname = edittext_firstname.getText().toString();
+        string_firstname = Utils.fix_name_for_firebase(string_firstname);
+
+        String string_lastname = editText_lastname.getText().toString();
+        string_lastname = Utils.fix_name_for_firebase(string_lastname);
+        String string_email = editText_email.getText().toString();
+
+        HashMap<String, String> user_info_hashmap = Utils.getInstance().user_info_hashmap;
+        user_info_hashmap.put("first_name", string_firstname);
+        user_info_hashmap.put("last_name", string_lastname);
+        user_info_hashmap.put("Pavilion", String.valueOf(false));
+        user_info_hashmap.put("Mary Anne Evans", String.valueOf(false));
+        user_info_hashmap.put("Ada Byron King", String.valueOf(false));
+        user_info_hashmap.put("John Clare", String.valueOf(false));
+
+
+        FB_database.collection("User_Info").document(string_email).set(user_info_hashmap);
+
+
+
     }
 
 

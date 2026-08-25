@@ -19,9 +19,13 @@
         android:id="@+id/bottomNavigationView"
         android:foregroundGravity="bottom"
         android:background="@color/material_dynamic_neutral80"
+        android:backgroundTint="@color/NTU_Colour_Light_Grey"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_marginBottom="-40dp"
+        android:theme="@style/Bottom.Nav.Bar.Theme"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:menu="@menu/bottom_nav_bar"/>
+        app:menu="@menu/bottom_nav_bar"
+        app:labelVisibilityMode="labeled"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
